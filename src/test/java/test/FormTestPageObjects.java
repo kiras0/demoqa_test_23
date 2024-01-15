@@ -1,17 +1,20 @@
 package test;
 
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.FormTestPage;
 import pages.component.TableComponent;
 
 
 
-
+@Tag("demoqa")
 public class FormTestPageObjects extends BaseTest {
 
     FormTestPage formTestPage = new FormTestPage();
     TableComponent tableComponent = new TableComponent();
+
     @Test
     void fillFormTest() {
 
