@@ -8,14 +8,17 @@ import pages.FormTestPage;
 import pages.component.TableComponent;
 
 
-
+@DisplayName("Form test on demoqa")
 @Tag("demoqa")
 public class FormTestPageObjects extends BaseTest {
 
     FormTestPage formTestPage = new FormTestPage();
     TableComponent tableComponent = new TableComponent();
 
+
     @Test
+    @Tag("full")
+    @DisplayName("Filling form test")
     void fillFormTest() {
 
         formTestPage.openPage()
@@ -50,6 +53,8 @@ public class FormTestPageObjects extends BaseTest {
     }
 
     @Test
+    @Tag("half")
+    @DisplayName("Filling form test with only required fields")
     void requiredFieldFillFormTest() {
         formTestPage.openPage()
                 .closeBanner()
