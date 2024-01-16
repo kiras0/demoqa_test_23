@@ -5,7 +5,6 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attachments;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -37,10 +36,6 @@ public class BaseTest {
         Attachments.pageSource();
         Attachments.browserConsoleLogs();
         Attachments.addVideo();
-    }
-
-    @AfterAll
-    public static void close() {
         Selenide.closeWebDriver();
     }
 }
