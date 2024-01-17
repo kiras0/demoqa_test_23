@@ -28,10 +28,10 @@ public class FormTestPage {
 
 
 
-
+// open("/automation-practice-form"); Firefox fix*
     CalendarComponent calendarComponent = new CalendarComponent();
     public FormTestPage openPage() {
-        open("/automation-practice-form");
+        open("");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
 
         return this;

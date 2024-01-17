@@ -15,7 +15,7 @@ public class BaseTest {
     @BeforeAll
     static void beforeAll() {
         Configuration.remote =  System.getProperty("selenoid", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com/automation-practice-form");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
@@ -34,8 +34,8 @@ public class BaseTest {
     void addAttachments() {
         Attachments.screenshotAs("Screenshot");
         Attachments.pageSource();
-        Attachments.browserConsoleLogs();
         Attachments.addVideo();
+        //Attachments.browserConsoleLogs(); Temporary fix (Firefox console problem)
         Selenide.closeWebDriver();
     }
 }
